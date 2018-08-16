@@ -5,6 +5,7 @@ import {
   Link,
   Route
 } from 'react-router-dom';
+import Home from './Home';
 import AboutMe from './AboutMe';
 import MyProjects from './MyProjects';
 import Contact from './Contact';
@@ -18,6 +19,7 @@ export default class Main extends Component {
       <Router>
         <div className="main-container">
           <Head />
+          <Route exact path='/' component={Home} />
           <Route path="/about" component={AboutMe} />
           <Route path="/projects" component={MyProjects} />
           <Route path="/contact" component={Contact} />
