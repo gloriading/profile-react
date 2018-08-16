@@ -41,6 +41,25 @@ p {
   transform: rotate(90deg);
 }
 
+/* about */
+.row {
+ height: 70vh;
+ margin-top: 5vh;
+}
+.column {
+  margin: 0 auto;
+  border: 1px solid;
+  padding: 5px;
+  overflow: scroll;
+}
+.column p {
+  text-indent: 1em;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+
+
 
 /* footer */
 
