@@ -21,6 +21,7 @@ p {
   justify-content: center;
 }
 .welcome-message {
+  position: relative;
   border-right: 1px solid;
   border-left: 1px solid;
   margin-top: 20%;
@@ -30,9 +31,16 @@ p {
   transition: padding 0.3s;
 }
 .welcome-message:hover {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
+.job-title {
+  position: absolute;
+  right: -30%;
+  bottom: 40%;
+  transform: rotate(90deg);
+}
+
 
 /* footer */
 

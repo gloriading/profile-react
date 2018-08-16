@@ -9,6 +9,7 @@ export default class Home extends Component {
         <div className="welcome-message">
           <h1>Hi, I'am</h1>
           <h1>Gloria Ding</h1>
+          <p className="job-title">Web Developer</p>
         </div>
       </div>
     )
