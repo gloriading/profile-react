@@ -7,10 +7,8 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+ } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 
 export default class Head extends Component {
@@ -37,13 +35,13 @@ export default class Head extends Component {
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">aboutMe</NavLink>
+              <NavLink tag={Link} to="/about">aboutMe</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#">myProjects</NavLink>
+              <NavLink tag={Link} to="/projects">myProjects</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#">contactMe</NavLink>
+              <NavLink tag={Link} to="/contact">contactMe</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
