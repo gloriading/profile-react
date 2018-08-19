@@ -33,18 +33,39 @@ p {
   text-transform: uppercase;
   text-align: center;
   padding: 10px;
-  transition: padding 0.3s;
+  transition: all 0.3s;
 }
 .welcome-message:hover {
   padding-left: 25px;
   padding-right: 25px;
 }
-.job-title {
+.job-title-first {
   position: absolute;
   right: -30%;
   bottom: 40%;
   transform: rotate(90deg);
+  transition: all 0.3s;
 }
+.job-title-second {
+  position: absolute;
+  left: -35%;
+  bottom: 40%;
+  transform: rotate(-90deg);
+  transition: all 0.3s;
+}
+.welcome-message:hover .job-title-first {
+  transform: rotate(0deg);
+  right: 50%;
+  bottom: 100%;
+  color: deeppink;
+}
+.welcome-message:hover .job-title-second {
+  transform: rotate(0deg);
+  left: 35%;
+  bottom: -10%;
+}
+
+
 
 /* about */
 .about-container {
