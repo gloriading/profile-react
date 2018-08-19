@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import PersonImg from '../images/person.jpg';
-
-let personBg = {
-    backgroundImage: 'url(' + PersonImg + ')',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    overflow: 'hidden'
-  }
+// import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FiLinkedin, FiGithub } from 'react-icons/fi';
+const Dragon = require('../images/dragon.png');
 
 export default class AboutMe extends Component {
 
@@ -16,31 +10,28 @@ export default class AboutMe extends Component {
     return(
       <div className="about-container">
         <div className="about-content">
-          <p>
-            I am a Web developer who loves exploring and learning new technologies. During my free time, I enjoy sharing my knowledge of coding. And I love movies (superhero, horror), games (AOE, Hearthstone), and talks.
+          <h2> aboutMe </h2>
+
+          <p className="bio">
+            I am a Web developer who loves exploring and learning new technologies from various online sources; moveover, I volunteer as a mentor in several classes with Canada Learning Code, aim to help more peeple discover the fascination of coding. My goal is to become an awesome front-end web & mobile developer!
           </p>
-          <p>
+          <p className="tech">
             Technologies I use: HTML5, CSS, JavaScript, jQuery, Ajax, Bootstrap, React.js, React Native, Apollo, GraphQL, Ruby on Rails, PostgreSQL, GitHub
           </p>
 
         </div>
-        <div className="about-image" style={personBg}>
+        <div className="about-image">
           <div className="img-overlay">
             <a href="#">
-              <FaLinkedin className="icon icon-linkedin" />
+              <FiLinkedin className="icon icon-linkedin" />
             </a>
             <a href="#">
-              <FaGithub className="icon icon-github" />
+              <FiGithub className="icon icon-github" />
             </a>
           </div>
-
-          {/* <img src={PersonImg} alt="a girl" className="profile-img"/> */}
+          <img src={Dragon} alt="Dragon" className="dragon-img"/>
         </div>
 
-
-        {/* <p>
-          Quotes I like: "Do not pray for an easy life, pray for the strength to endure a difficult one.  -- Bruce Lee"
-        </p> */}
       </div>
     )
   }
