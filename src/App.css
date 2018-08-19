@@ -82,6 +82,19 @@ p {
   color: #333;
 }
 
+/* projects */
+.projects-container {
+  min-height: calc(100vh - 106px);
+}
+
+
+/* contact */
+.contact-container {
+  min-height: calc(100vh - 106px);
+}
+
+
+
 
 /* footer */
 
