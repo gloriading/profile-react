@@ -1,9 +1,23 @@
 import React, { Component } from 'react';
-// import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import { FiLinkedin, FiGithub } from 'react-icons/fi';
+import { FiLinkedin, FiGithub, FiMonitor } from 'react-icons/fi';
+import { Tooltip } from 'reactstrap';
 const Dragon = require('../images/dragon.png');
 
 export default class AboutMe extends Component {
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      tooltipOpen: false
+    };
+  }
+
+  toggle() {
+    this.setState({
+      tooltipOpen: !this.state.tooltipOpen
+    });
+  }
 
 
   render(){
@@ -22,11 +36,19 @@ export default class AboutMe extends Component {
         </div>
         <div className="about-image">
           <div className="img-overlay">
-            <a href="#">
+            <a href="https://www.linkedin.com/in/gloriading/" target="_blank">
               <FiLinkedin className="icon icon-linkedin" />
             </a>
-            <a href="#">
+            <a href="https://github.com/gloriading" target="_blank">
               <FiGithub className="icon icon-github" />
+            </a>
+            <a href="https://gloriading.github.io/profile-examples/gloriousWeb/index.html" target="_blank">
+              <FiMonitor className="icon icon-static-site" id="staticSite"/>
+              <Tooltip
+                placement="top" isOpen={this.state.tooltipOpen}
+                target="staticSite" toggle={this.toggle}>
+                My portfolio site with HTML5 and CSS3
+              </Tooltip>
             </a>
           </div>
           <img src={Dragon} alt="Dragon" className="dragon-img"/>

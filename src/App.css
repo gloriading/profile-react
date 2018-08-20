@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Rubik:400,700');
+
+
 /* global */
 *, *:after, *:before {
   margin: 0;
@@ -17,6 +20,12 @@ a {
 
 p {
   margin: 0;
+  font-family: 'Rubik', Helvetica, sans-serif;
+}
+
+/* nav */
+.branding {
+  font-family: 'Abril Fatface', Helvetica, sans-serif;
 }
 
 /* home */
@@ -38,6 +47,10 @@ p {
 .welcome-message:hover {
   padding-left: 25px;
   padding-right: 25px;
+}
+.welcome-message h1 {
+  font-family: 'Abril Fatface', Helvetica, sans-serif;
+  letter-spacing: 1px;
 }
 .job-title-first {
   position: absolute;
@@ -76,6 +89,10 @@ p {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.about-content h2 {
+  font-family: 'Abril Fatface', Helvetica, sans-serif;
+}
+
 .about-content p {
   font-size: 16px;
 }
@@ -111,6 +128,9 @@ p {
 }
 .icon-github {
   color: #333;
+}
+.icon-static-site {
+  color: deeppink;
 }
 .about-content p {
   font-size: 20px;
@@ -157,7 +177,9 @@ p.tech {
   font-size: 12px;
   line-height: 3;
 }
-
+.footer span {
+  color: deeppink;
+}
 
 /* media queries */
 

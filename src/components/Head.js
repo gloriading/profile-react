@@ -30,7 +30,7 @@ export default class Head extends Component {
     return(
       <div className="Head-container">
         <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">glorious react</NavbarBrand>
+        <NavbarBrand href="/" className="branding">Glorious React</NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
