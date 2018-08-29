@@ -20,7 +20,7 @@ const projects = [
   {
     name: "Modern Portfolio",
     link: "https://gloriading.github.io/modern_portfolio/",
-    image: require('../images/project-03.png'),
+    image: require('../images/project-04.png'),
     description: "Portfolio Website"
   }
 ]
