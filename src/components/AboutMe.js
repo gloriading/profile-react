@@ -36,13 +36,19 @@ export default class AboutMe extends Component {
         </div>
         <div className="about-image">
           <div className="img-overlay">
-            <a href="https://www.linkedin.com/in/gloriading/" target="_blank">
+            <a href="https://www.linkedin.com/in/gloriading/"
+            rel="noopener noreferrer"
+            target="_blank">
               <FiLinkedin className="icon icon-linkedin" />
             </a>
-            <a href="https://github.com/gloriading" target="_blank">
+            <a href="https://github.com/gloriading"
+            rel="noopener noreferrer"
+            target="_blank">
               <FiGithub className="icon icon-github" />
             </a>
-            <a href="https://gloriading.github.io/profile-examples/gloriousWeb/index.html" target="_blank">
+            <a href="https://gloriading.github.io/profile-examples/gloriousWeb/index.html"
+            rel="noopener noreferrer"
+            target="_blank">
               <FiMonitor className="icon icon-static-site" id="staticSite"/>
               <Tooltip
                 placement="top" isOpen={this.state.tooltipOpen}
