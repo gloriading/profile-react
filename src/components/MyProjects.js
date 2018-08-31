@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { projects } from '../data/projects'
-
+import { FiLink } from 'react-icons/fi';
 
 export default class MyProjects extends Component {
   constructor(props){
@@ -14,15 +14,16 @@ export default class MyProjects extends Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
-  handleClick(title, url, img, des){
+  handleClick(title, url, img, des, e){
     this.setState({
       title: title,
       url: url,
       img: img,
       description: des,
      })
-     console.log(url)
+
   }
+
 
   render(){
     let projectList;
@@ -46,15 +47,17 @@ export default class MyProjects extends Component {
             {projectList}
           </div>
           <div className="project-display">
-            <div className="project-title">
-              {title ? <h3>{title}</h3> : ""}
-              {url ? <a href={url}>project link</a> : ""}
+            <div className="project-title-box">
+              {title ?
+                <h4 className="project-title">{title}</h4> : ""}
+              {url ? <a href={url} rel="noopener noreferrer"
+              target="_blank" className="project-url"><FiLink/> project link</a> : ""}
             </div>
             <div className="project-description">
               {description ? <p>{description}</p> : ""}
             </div>
             <div className="project-img">
-              {img ? <img src={img} alt={title}/> : ""}
+              {img ? <img src={img} alt={title} /> : ""}
             </div>
           </div>
         </div>
