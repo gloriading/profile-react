@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Rubik:400,700');
-
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto+Condensed|Rubik');
 
 /* global */
 *, *:after, *:before {
@@ -188,9 +187,8 @@ p.tech {
 }
 
 .project-title {
-  background-color: gold;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
-  transform: rotate(-5deg);
+  font-family: 'Roboto Condensed', Helvetica, sans-serif;
+  border: 1px solid rgba(0,0,0,0.4);
   position: relative;
   padding: 5px 30px;
   border-radius: 50px;
