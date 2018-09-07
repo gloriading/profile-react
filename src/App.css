@@ -83,54 +83,21 @@ p {
 .about-container {
   min-height: calc(100vh - 106px);
   padding: 20px 30px;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(2, 1fr);
 }
 
+.about-content {
+  margin: auto;
+  max-width: 600px;
+}
 .about-content h2 {
   font-family: 'Abril Fatface', Helvetica, sans-serif;
 }
 
 .about-content p {
   font-size: 16px;
+  margin-top: 1.5rem;
 }
 
-.about-image {
-  text-align: center;
-  position: relative;
-  display:flex;
-  align-items: center;
-  justify-content:center;
-}
-.img-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background-color: rgba(255,255,255,0.8);
-}
-.dragon-img {
-  max-width: 80%;
-}
-.icon {
-  font-size: 60px;
-  margin: 20px 10px 10px 10px;
-  transition: 0.2s;
-}
-.icon:hover {
-  transform: translateY(10px);
-}
-.icon-linkedin {
-  color: #0077B5;
-}
-.icon-github {
-  color: #333;
-}
-.icon-static-site {
-  color: deeppink;
-}
 .about-content p {
   font-size: 20px;
   letter-spacing: 1px;
@@ -221,6 +188,23 @@ p.tech {
 /* contact */
 .contact-container {
   min-height: calc(100vh - 106px);
+}
+.icon {
+  font-size: 60px;
+  margin: 20px 10px 10px 10px;
+  transition: 0.2s;
+}
+.icon:hover {
+  transform: translateY(10px);
+}
+.icon-linkedin {
+  color: #0077B5;
+}
+.icon-github {
+  color: #333;
+}
+.icon-static-site {
+  color: deeppink;
 }
 
 
