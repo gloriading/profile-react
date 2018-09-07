@@ -23,7 +23,6 @@ export default class Contact extends Component {
   render(){
     return(
       <div className="contact-container">
-        <h2>contact me</h2>
         <div className="contact-inner">
           <a href="https://www.linkedin.com/in/gloriading/"
           rel="noopener noreferrer"

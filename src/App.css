@@ -189,6 +189,10 @@ p.tech {
 .contact-container {
   min-height: calc(100vh - 106px);
 }
+.contact-inner {
+  text-align: center;
+  /* border: 1px solid black; */
+}
 .icon {
   font-size: 60px;
   margin: 20px 10px 10px 10px;
