@@ -18,7 +18,7 @@ export default class Main extends Component {
       <Router>
         <div className="main-container">
           <Head />
-          <Route path='/' component={Home} />
+          <Route exact path='/' component={Home} />
           <Route path="/about" component={AboutMe} />
           <Route path="/projects" component={MyProjects} />
           <Route path="/contact" component={Contact} />
