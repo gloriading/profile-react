@@ -14,14 +14,14 @@ export default class MyProjects extends Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
-  handleClick(title, url, img, des, e){
-    this.setState({
-      title: title,
-      url: url,
-      img: img,
-      description: des,
-     })
+  // componentDidMount(){
+  //   const { title, url, img, description } = projects[0];
+  //   console.log(projects[0]);
+  //   this.setState({ title, url, img, description});
+  // }
 
+  handleClick(title, url, img, description){
+    this.setState({ title, url, img, description})
   }
 
 
@@ -30,7 +30,7 @@ export default class MyProjects extends Component {
     projectList = projects.map((project, index) => {
       return (
       <p key={index}
-        onClick={()=> this.handleClick(project.name, project.link, project.image, project.description)}
+        onClick={()=> this.handleClick(project.name, project.url, project.image, project.description)}
         >
         {project.name}
       </p>
@@ -48,10 +48,12 @@ export default class MyProjects extends Component {
           </div>
           <div className="project-display">
             <div className="project-title-box">
-              {title ?
-                <h4 className="project-title">{title}</h4> : ""}
-              {url ? <a href={url} rel="noopener noreferrer"
-              target="_blank" className="project-url"><FiLink/> project link</a> : ""}
+              {title && url ?
+                <a href={url} rel="noopener noreferrer"
+                target="_blank" className="project-url">
+                  <h4 className="project-title">{title}</h4>
+                </a>
+                : ""}
             </div>
             <div className="project-description">
               {description ? <p>{description}</p> : ""}
