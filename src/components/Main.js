@@ -12,8 +12,6 @@ import Contact from './Contact';
 import {Footer} from './Footer';
 
 export default class Main extends Component {
-
-
   render(){
     return(
       <Router>
@@ -25,7 +23,6 @@ export default class Main extends Component {
             <Route exact path="/projects" component={MyProjects} />
             <Route exact path="/contact" component={Contact} />
           </Switch>
-
           <Footer />
         </div>
       </Router>
