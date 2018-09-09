@@ -21,10 +21,11 @@ export default class Main extends Component {
           <Head />
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route path="/about" component={AboutMe} />
-            <Route path="/projects" component={MyProjects} />
-            <Route path="/contact" component={Contact} />
+            <Route exact path="/about" component={AboutMe} />
+            <Route exact path="/projects" component={MyProjects} />
+            <Route exact path="/contact" component={Contact} />
           </Switch>
+
           <Footer />
         </div>
       </Router>
