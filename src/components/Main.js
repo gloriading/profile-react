@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Head from './Head';
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  Switch
 } from 'react-router-dom';
 import Home from './Home';
 import AboutMe from './AboutMe';
@@ -18,13 +19,14 @@ export default class Main extends Component {
       <Router>
         <div className="main-container">
           <Head />
-          <Route exact path='/' component={Home} />
-          <Route path="/about" component={AboutMe} />
-          <Route path="/projects" component={MyProjects} />
-          <Route path="/contact" component={Contact} />
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path="/about" component={AboutMe} />
+            <Route path="/projects" component={MyProjects} />
+            <Route path="/contact" component={Contact} />
+          </Switch>
           <Footer />
         </div>
-
       </Router>
     )
   }
