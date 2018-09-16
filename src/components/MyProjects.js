@@ -10,27 +10,33 @@ export default class MyProjects extends Component {
       decription: '',
       img:'',
       url:'',
+      entryAnimation: false,
     }
-    this.handleClick = this.handleClick.bind(this)
+    // this.handleClick = this.handleClick.bind(this);
+    // this.addEntryAnimation = this.addEntryAnimation.bind(this);
   }
 
-  // componentDidMount(){
-  //   const { title, url, img, description } = projects[0];
-  //   console.log(projects[0]);
-  //   this.setState({ title, url, img, description});
-  // }
-
-  handleClick(title, url, img, description){
-    this.setState({ title, url, img, description})
+  handleClick(project){
+    const {name, url, image, description} = project;
+    this.setState({ title: name, url, img: image, description})
+    this.addEntryAnimation();
   }
 
+  addEntryAnimation(){
+    this.setState({ entryAnimation: true });
+  }
+
+  removeEntryAnimation(){
+    this.setState({ entryAnimation: false });
+  }
 
   render(){
     let projectList;
     projectList = projects.map((project, index) => {
       return (
       <p key={index}
-        onClick={()=> this.handleClick(project.name, project.url, project.image, project.description)}
+        onClick={()=> this.handleClick(project)}
+        onMouseEnter={()=> this.removeEntryAnimation()}
         >
         {project.name}
       </p>
@@ -46,7 +52,8 @@ export default class MyProjects extends Component {
           <div className="project-list">
             {projectList}
           </div>
-          <div className="project-display">
+
+          <div className={this.state.entryAnimation ? "project-display animated fadeIn" : "project-display"}  >
             <div className="project-title-box">
               {title && url ?
                 <a href={url} rel="noopener noreferrer"
@@ -62,6 +69,7 @@ export default class MyProjects extends Component {
               {img ? <img src={img} alt={title} /> : ""}
             </div>
           </div>
+
         </div>
       </div>
     )
