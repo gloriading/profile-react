@@ -10,6 +10,7 @@ import Home from './components/Home';
 import AboutMe from './components/AboutMe';
 import MyProjects from './components/MyProjects';
 import Contact from './components/Contact';
+import NotFound from './components/NotFound';
 import {Footer} from './components/Footer';
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
             <Route exact path="/about" component={AboutMe} />
             <Route exact path="/projects" component={MyProjects} />
             <Route exact path="/contact" component={Contact} />
+            <Route component={NotFound} />
           </Switch>
 
           <Footer />
