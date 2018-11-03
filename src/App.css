@@ -147,6 +147,25 @@ p.tech {
   grid-template-columns: 30% 70%;
 }
 
+.click-here {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: hotpink;
+  animation: float 3s infinite alternate;
+}
+
+@keyframes float {
+  from { 
+    transform: translateY(30%);
+    background-color: hotpink; 
+  }
+  to { 
+    transform: translateY(-30%);
+    background-color: deeppink;
+  }
+}
+
 .project-title-box {
   display: inline-block;
   margin-bottom: 10px;
@@ -246,6 +265,15 @@ p.tech {
 .notFound-container {
   min-height: calc(100vh - 106px);
   padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+.notFound-container h1 {
+  letter-spacing: 2px;
+  font-size: 80px;
 }
 
 /* media queries */

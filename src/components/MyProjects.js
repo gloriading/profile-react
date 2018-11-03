@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { projects } from '../data/projects'
-import { FiLink } from 'react-icons/fi';
 
 export default class MyProjects extends Component {
   constructor(props){
@@ -11,9 +10,8 @@ export default class MyProjects extends Component {
       img:'',
       url:'',
       entryAnimation: false,
-    }
-    // this.handleClick = this.handleClick.bind(this);
-    // this.addEntryAnimation = this.addEntryAnimation.bind(this);
+      indicationOn: true,
+    }    
   }
 
   handleClick(project){
@@ -30,13 +28,20 @@ export default class MyProjects extends Component {
     this.setState({ entryAnimation: false });
   }
 
+  removeIndication(){
+    this.setState({ indicationOn: false });
+  }
+
   render(){
     let projectList;
     projectList = projects.map((project, index) => {
       return (
       <p key={index}
         onClick={()=> this.handleClick(project)}
-        onMouseEnter={()=> this.removeEntryAnimation()}
+        onMouseEnter={()=> {
+          this.removeEntryAnimation();
+          // this.removeIndication();
+        }}
         >
         {project.name}
       </p>
@@ -54,6 +59,8 @@ export default class MyProjects extends Component {
           </div>
 
           <div className={this.state.entryAnimation ? "project-display animated fadeIn" : "project-display"}  >
+            { this.state.indicationOn ? 
+              <div className="click-here"></div> : null }
             <div className="project-title-box">
               {title && url ?
                 <a href={url} rel="noopener noreferrer"
